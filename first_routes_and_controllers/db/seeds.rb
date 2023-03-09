@@ -6,6 +6,14 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.create(name: "Vamshi", email: "vamshi@gmail.com");
-User.create(name: "Brian", email: "brian@gmail.com");
-User.create(name: "Darren", email: "darren@gmail.com");
+User.create!(username: "rvamshi");
+User.create!(username: "vbrian");
+User.create!(username: "edarren");
+
+Artwork.create!(title: "Mona Lisa", image_url: "https://www.google1.com", artist_id: 1);
+Artwork.create!(title: "Starry Night", image_url: "https://www.google2.com", artist_id: 2);
+Artwork.create!(title: "The Scream", image_url: "https://www.google3.com", artist_id: 3);
+
+ArtworkShare.create!(artwork_id: 1, viewer_id: 2);
+ArtworkShare.create!(artwork_id: 2, viewer_id: 3);
+ArtworkShare.create!(artwork_id: 3, viewer_id: 1);
